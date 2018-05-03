@@ -1,0 +1,60 @@
+<html>
+
+<head>
+<title>Online Photo Gallery</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+</head>
+
+<body style='background-color:#373434'>
+	<style>
+
+.center-block {
+  float:none;
+}
+   
+   img[alt="www.000webhost.com"]{display:none;}
+
+</style>
+
+
+<div class="container">
+
+<div>
+    <h2 style='color:white;' align="center">Online Photo Gallery</h2>
+    <hr>
+    <p align="center"><font style='color:white;font-size:20px;font-family:Courier New'>Album name: </font><font style='color:#2BCF16;font-family:Courier;font-size:20px;font-style:italic;'><strong> alb_name</strong></font></font></p>
+    <font color="#48B2C0" face="verdana" size="4">img_indx/total_img</font>
+  </div>	
+	
+  <div class="row" style='padding-bottom:10;padding-top:20;'>
+  		<div class="col-sm-12 col-md-12">
+  		<img src="./img/img_img_indx.jpeg" alt="image" class="img-responsive center-block"/>
+  		</div>
+  </div>
+
+  	<div class="row">
+		<div class="col-sm-2 btn-group btn-group-lg center-block">
+			<button id="left" type="button" class="btn btn-primary"><</button>
+    		<button id="right" type="button" class="btn btn-primary">></button>
+		</div>
+  </div>
+</div>
+
+<script type="text/javascript">
+    document.getElementById("right").onclick = function () {
+        location.href = "page_next.html";
+    };
+
+document.getElementById("left").onclick = function () {
+        location.href = "page_prev.html";
+    };
+
+</script>
+
+</body>
+
+
+
+</html>

